@@ -36,9 +36,9 @@ button{
   border: none;
   color: #FFFFFF;
   text-align: center;
-  font-size: 28px;
-  padding: 15px;
-  width: 200px;
+  font-size: 20px;
+  padding: 10px;
+  width: 100px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
@@ -50,7 +50,7 @@ button{
     position: relative;
     transition: 0.5s;
     font-size: small;
-    size: 10px;
+    size: 5px;
   }
   
   .button span:after {

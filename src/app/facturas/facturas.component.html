@@ -10,7 +10,7 @@
     <select [(ngModel)]="facturaDetails.user_id">
       <option *ngFor="let user of User"
         [value]="user.id">
-        {{user.username}}
+        {{user.username}} {{user.apellido}}
     </option>
     </select>
   </div>
