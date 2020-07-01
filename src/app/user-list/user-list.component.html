@@ -7,6 +7,7 @@
             <th><h1>Apellido</h1></th>
             <th><h1>Correo</h1></th>
             <th><h1>Telefono</h1></th>
+            <th><h1>Accion</h1></th>
         </tr>
     </thead>
     <tbody>
@@ -15,7 +16,13 @@
             <td>{{user.apellido}}</td>
             <td>{{user.correo}}</td>
             <td>{{user.telefono}}</td>
-            <td><button (click)="deleteUser(user.id)">-</button></td>
+            <td><button class="button" (click)="deleteUser(user.id)"><span>Delete</span></button></td>
         </tr>
     </tbody>
 </table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

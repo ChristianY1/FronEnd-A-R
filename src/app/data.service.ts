@@ -34,5 +34,9 @@ export class DataService {
     return this.http.delete<User>(this.userUrl+'/' + id);
   }
 
+  deleteFactura(id: number) {
+    return this.http.delete<Bill>(this.billUrl + '/' + id);
+  }
+
 
 }
