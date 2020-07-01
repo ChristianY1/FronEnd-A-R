@@ -1,0 +1,40 @@
+
+  <h1>Factura</h1>
+  <div classname="header-factura">
+    <label for="fecha">Fecha : </label>
+    <input type="date" id="fecha" name="fecha"
+       value="2020-06-28"
+       min="2020-06-08" max="2020-12-31" [(ngModel)]="facturaDetails.fecha">
+
+    <label for="paciente">Paciente : </label>
+    <select [(ngModel)]="facturaDetails.user_id">
+      <option *ngFor="let user of User"
+        [value]="user.id">
+        {{user.username}}
+    </option>
+    </select>
+  </div>
+  <br>
+  <table>
+   <tr>
+    <th>Producto</th>
+    <th>Precio</th>
+    <th>Cantidad</th>
+    <th>Total</th>
+   </tr>
+   <tr>
+    <td><input type="text" name="producto" [(ngModel)]="facturaDetails.producto"></td>
+    <td>$<input type="numer" name="precio" [(ngModel)]="facturaDetails.precio"></td>
+    <td><input type="number" name="cantidad" [(ngModel)]="facturaDetails.cantidad" (input)="calcularTotal()"></td>
+    <td>${{facturaDetails.total}}</td>
+   </tr>
+   <tr>
+    <td colspan="3">Subtotal</td>
+	<td>250</td>
+   </tr>  
+   <tr>
+    <td colspan="3">Precio total</td>
+	<td>255</td>
+   </tr> 
+  </table>
+  <button className="btn btn-success btn-lg btn-block" (click)="addFactura(this.facturaDetails)">Facturar</button>

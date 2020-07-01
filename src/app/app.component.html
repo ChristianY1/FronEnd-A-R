@@ -1,23 +1,19 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<a routerLink='/users'>View Users</a>
-<h1>
-  {{title}}
-</h1>
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<header>
+  <div class="container">
+    <a routerLink="/" class="logo">GoMedTor</a>
+    <nav>
+      <ul>
+        <li><a href="#" routerLink="/home">Home</a></li>
+        <li><a href="#" routerLink="/registrar">Registrarse</a></li>
+        <a routerLink='/users'>Ver Usuarios</a>
+        <li><a href="#" routerLink="/facturar">Facturar</a></li>
+        <li><a href="#" routerLink="/facturaList">Ver Facturas</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
 
-
-
-<router-outlet></router-outlet>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

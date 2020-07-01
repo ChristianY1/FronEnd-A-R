@@ -10,7 +10,7 @@ import { Observable, timer } from 'rxjs';
 export class UserListComponent implements OnInit {
 
   User: any = [];
-
+  id: number;
 
   constructor(public dataService: DataService) { }
 
@@ -23,6 +23,12 @@ export class UserListComponent implements OnInit {
      return this.dataService.getUsers().subscribe((data: {}) => {
        this.User = data;
      })
+  }
+
+  deleteUser(id) {
+    return this.dataService.deleteUser(id).subscribe(data => {
+      this.getUsers();
+    })
   }
 
 }

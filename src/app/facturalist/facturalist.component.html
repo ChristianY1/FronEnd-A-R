@@ -1,0 +1,26 @@
+
+<br>
+<br>
+<table className="center">
+    <thead>
+        <tr>
+            <th><h1>Id Factura</h1></th>
+            <th><h1>Fecha Emision</h1></th>
+            <th><h1>Descripcion</h1></th>
+            <th><h1>Precio</h1></th>
+            <th><h1>Total</h1></th>
+            <th><h1>Id usuario</h1></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor =" let factura of Factura">
+            <td>{{factura.id}}</td>
+            <td>{{factura.fecha}}</td>
+            <td>{{factura.producto}}</td>
+            <td>${{factura.precio}} .0</td>
+            <td>${{factura.total}} .0</td>
+            <td>{{factura.user_id}}</td>
+            <!--<td><button (click)="deleteUser(user.id)">-</button></td>-->
+        </tr>
+    </tbody>
+</table>
