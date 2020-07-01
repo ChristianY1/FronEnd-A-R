@@ -49,6 +49,13 @@ export class FacturasComponent implements OnInit {
     return this.facturaDetails.total = tot.toString()
   }
 
+  calcularSubtotal() {
+    return this.facturaDetails.subtotal = this.facturaDetails.total;
+  }
+  calcularPrecioTotal() {
+    return this.facturaDetails.precioTotal = this.facturaDetails.total;
+  }
+
   onFinish() {
     this.calcularTotal();
   }

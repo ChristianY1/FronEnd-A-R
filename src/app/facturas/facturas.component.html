@@ -25,16 +25,16 @@
    <tr>
     <td><input type="text" name="producto" [(ngModel)]="facturaDetails.producto"></td>
     <td>$<input type="numer" name="precio" [(ngModel)]="facturaDetails.precio"></td>
-    <td><input type="number" name="cantidad" [(ngModel)]="facturaDetails.cantidad" (input)="calcularTotal()"></td>
+    <td><input type="number" name="cantidad" [(ngModel)]="facturaDetails.cantidad" (input)="calcularTotal()" (input)="calcularSubtotal()" (input)="calcularPrecioTotal()"></td>
     <td>${{facturaDetails.total}}</td>
    </tr>
    <tr>
     <td colspan="3">Subtotal</td>
-	<td>250</td>
+	<td>${{facturaDetails.subtotal}}</td>
    </tr>  
    <tr>
     <td colspan="3">Precio total</td>
-	<td>255</td>
+	<td>${{facturaDetails.precioTotal}}</td>
    </tr> 
   </table>
   <button className="btn btn-success btn-lg btn-block" (click)="addFactura(this.facturaDetails)">Facturar</button>

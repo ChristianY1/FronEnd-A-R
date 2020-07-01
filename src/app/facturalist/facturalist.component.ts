@@ -22,4 +22,10 @@ export class FacturalistComponent implements OnInit {
     })
   }
 
+  deleteFactura(id) {
+    return this.dataService.deleteFactura(id).subscribe(data => {
+      this.getFacturas();
+    })
+  }
+
 }

@@ -10,6 +10,7 @@
             <th><h1>Precio</h1></th>
             <th><h1>Total</h1></th>
             <th><h1>Id usuario</h1></th>
+            <th><h1>Accion</h1></th>
         </tr>
     </thead>
     <tbody>
@@ -20,7 +21,15 @@
             <td>${{factura.precio}} .0</td>
             <td>${{factura.total}} .0</td>
             <td>{{factura.user_id}}</td>
-            <!--<td><button (click)="deleteUser(user.id)">-</button></td>-->
+            <td><button class="button" (click)="deleteFactura(factura.id)"><span>Delete</span></button></td>
+        
         </tr>
     </tbody>
 </table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
