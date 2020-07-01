@@ -1,0 +1,48 @@
+<h1>Registro de nuevo Usuario</h1>
+<div classname="container">
+    <label for="nombre">Nombre</label><br>
+    <input type="text" placeholder="Nombre" [(ngModel)]="UserDetails.username" required><br>
+
+    <label for="apellido">Apellido</label><br>
+    <input type="text" placeholder="Apellido" [(ngModel)]="UserDetails.apellido" required><br>
+
+    <label for="fechaNacimiento">Fecha de Nacimiento:</label><br>
+    <input type="date" id="fechaNacimiento" name="trip-start"
+       value="1995-07-22"
+       min="1985-01-01" max="2020-12-31" [(ngModel)]="UserDetails.fechaDeNacimiento" required><br>
+
+    <label for="sexo">Sexo</label><br>
+    <select id="sexo" name="sexo" [(ngModel)]="UserDetails.sexo" required>
+        <option value="femenino">Femenino</option>
+        <option value="masculino">Masculino</option>
+    </select><br>
+
+    <label for="numero">Numero de telefono</label><br>
+    <input type="number" placeholder="Numero telefonico" [(ngModel)]="UserDetails.telefono" required><br>
+
+    <label for="email">Correo electronico</label><br>
+    <input type="text" placeholder="email" [(ngModel)]="UserDetails.correo" required><br>
+
+    <label for="psw">Password</label>
+    <input type="password" id="psw"  placeholder="********"  [(ngModel)]="UserDetails.psw" required>
+
+    <button className="btn btn-success btn-lg btn-block" (click)="addUser(UserDetails)">Registrar Usuario</button>
+    <p *ngIf="miMensaje; then">Usuario creado</p>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    
+</div>
+<div id="message">
+    <h3>Password must contain the following:</h3>
+    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+    <p id="number" class="invalid">A <b>number</b></p>
+    <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+  </div>
